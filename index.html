@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ট্রাস্ট ফ্যাসিলিটি সলিউশন | Trust Facility Solution - প্রিমিয়াম সার্ভিস বাংলাদেশ</title>
+  <meta name="description" content="পেশাদার অফিস ক্লিনার, ইলেকট্রিশিয়ান, বিল্ডিং ম্যানেজার ও টি বয়/মেয়ে সেবা। নির্ভরতা, গতি ও শ্রেষ্ঠত্বের নাম ট্রাস্ট ফ্যাসিলিটি সলিউশন।">
+  <meta name="theme-color" content="#050C1A">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Hind Siliguri', sans-serif;
+      background: #030614;
+      color: #F0F4FA;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Animated gradient orbs */
+    .orb-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      background: radial-gradient(circle at 20% 30%, #0B1730, #020617);
+      overflow: hidden;
+    }
+    .orb {
+      position: absolute;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.4;
+      animation: floatOrb 20s infinite alternate;
+    }
+    .orb1 { background: #00D4FF; top: -10%; left: -10%; }
+    .orb2 { background: #FFB347; bottom: -20%; right: -5%; animation-duration: 25s; }
+    .orb3 { background: #9D4EDD; top: 50%; left: 60%; width: 40vw; height: 40vw; opacity: 0.3; }
+    @keyframes floatOrb {
+      0% { transform: translate(0,0) scale(1); }
+      100% { transform: translate(5%, 5%) scale(1.2); }
+    }
+
+    /* Glass Nav */
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 88%;
+      max-width: 1300px;
+      background: rgba(3, 12, 30, 0.7);
+      backdrop-filter: blur(14px);
+      border-radius: 70px;
+      border: 1px solid rgba(0, 212, 255, 0.35);
+      padding: 12px 32px;
+      z-index: 1000;
+      transition: 0.25s;
+    }
+    .navbar.scrolled {
+      top: 10px;
+      background: rgba(2, 8, 20, 0.95);
+      border-color: #00D4FF;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo a {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(125deg, #FFFFFF, #00D4FF, #FFB347);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #E2E8FF;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color: #00D4FF; text-shadow: 0 0 5px #00D4FF; }
+    .mobile-menu-icon { display: none; font-size: 2rem; cursor: pointer; color: #00D4FF; }
+
+    /* Hero */
+    .hero {
+      min-height: 95vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+      z-index: 3;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #FFFFFF, #00D4FF, #FFB347);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+    .hero .bangla-head {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #FFD966;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      color: #C0D0F0;
+    }
+    .btn-glow {
+      background: linear-gradient(95deg, #00D4FF, #9D4EDD);
+      border: none;
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #030614;
+      transition: 0.3s;
+      box-shadow: 0 0 15px #00D4FF;
+      margin: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #00D4FF;
+      color: #00D4FF;
+      box-shadow: none;
+    }
+    .btn-glow:hover { transform: translateY(-5px); filter: brightness(1.05); box-shadow: 0 0 25px #00D4FF; }
+
+    /* Section styles */
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 90px 0; position: relative; z-index: 2; }
+    .section-title {
+      font-size: 2.8rem;
+      text-align: center;
+      background: linear-gradient(125deg, #FFF, #00D4FF);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      text-align: center;
+      color: #A5BBE0;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    /* Premium Image Grid - Dopamine visuals */
+    .image-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .img-card {
+      border-radius: 32px;
+      overflow: hidden;
+      transition: all 0.5s;
+      transform: translateY(0);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      border: 1px solid rgba(0,212,255,0.2);
+    }
+    .img-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      transition: transform 0.6s;
+      display: block;
+    }
+    .img-card:hover {
+      transform: translateY(-12px);
+      border-color: #00D4FF;
+    }
+    .img-card:hover img { transform: scale(1.05); }
+
+    /* Service Cards 3D */
+    .grid-3d {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .service-card {
+      background: rgba(15, 25, 50, 0.65);
+      backdrop-filter: blur(10px);
+      border-radius: 36px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 1px solid rgba(0,212,255,0.25);
+      transition: 0.3s;
+    }
+    .service-card i { font-size: 2.8rem; color: #00D4FF; margin-bottom: 1rem; }
+    .service-card h3 { font-size: 1.7rem; margin: 0.5rem 0; }
+    .service-card .bangla-desc { color: #FFD966; font-size: 0.9rem; margin-top: 0.5rem; }
+
+    /* Stats */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .stat-item {
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(12px);
+      border-radius: 48px;
+      padding: 1.8rem;
+      min-width: 180px;
+      text-align: center;
+      border: 1px solid rgba(0,212,255,0.3);
+    }
+    .stat-number { font-size: 2.8rem; font-weight: 800; color: #00D4FF; }
+
+    /* Testimonial */
+    .testi-card {
+      background: rgba(10, 20, 45, 0.7);
+      border-radius: 48px;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+      text-align: center;
+    }
+
+    /* Contact */
+    .contact-glass {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: rgba(5, 15, 35, 0.5);
+      border-radius: 48px;
+      padding: 2rem;
+      border: 1px solid rgba(0,212,255,0.2);
+    }
+
+    /* Footer */
+    footer { background: #020617; border-top: 1px solid rgba(0,212,255,0.2); text-align: center; padding: 2rem 0; }
+
+    /* Animations */
+    .fade-up { opacity: 0; transform: translateY(35px); transition: all 0.8s ease; }
+    .fade-up.revealed { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.4rem; }
+      .nav-links { position: fixed; top: 85px; left: -100%; width: 75%; background: #030C1E; flex-direction: column; padding: 2rem; border-radius: 32px; transition: 0.3s; backdrop-filter: blur(20px); border: 1px solid #00D4FF; }
+      .nav-links.active { left: 20px; }
+      .mobile-menu-icon { display: block; }
+      .btn-glow { margin: 0.5rem; }
+      .section-title { font-size: 2rem; }
+    }
+    .mobile-sticky { position: fixed; bottom: 20px; right: 20px; display: flex; gap: 12px; z-index: 1100; }
+    .sticky-btn { background: #0A1A2F; padding: 12px 20px; border-radius: 50px; color: white; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 8px; border: 1px solid #00D4FF; }
+    .sticky-wa { background: #25D366; border: none; }
+    @media (min-width: 769px) { .mobile-sticky { display: none; } }
+  </style>
+</head>
+<body>
+
+<div class="orb-bg">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo"><a href="#">⟡ TFS | ট্রাস্ট</a></div>
+    <div class="mobile-menu-icon" id="mobileMenuToggle"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">হোম</a></li>
+      <li><a href="#services">সেবা</a></li>
+      <li><a href="#whyus">কেন TFS</a></li>
+      <li><a href="#gallery">গ্যালারি</a></li>
+      <li><a href="#testimonials">মতামত</a></li>
+      <li><a href="#contact">যোগাযোগ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="container hero-content">
+    <div class="bangla-head">স্বাগতম ট্রাস্ট ফ্যাসিলিটি সলিউশনে</div>
+    <h1>বিশ্বাসের নামে <br>পেশাদার সেবা</h1>
+    <p>অফিস, বাড়ি বা শিল্প কারখানা — পরিচ্ছন্নতা, নিরাপত্তা ও পেশাদার ম্যানপাওয়ার এখন সোনার হাতে। নির্ভরতা, গতি ও মানের প্রতিশ্রুতি।</p>
+    <div>
+      <a href="tel:+8809696747242" class="btn-glow"><i class="fas fa-phone-alt"></i> কল করুন</a>
+      <a href="https://wa.me/8809696747242" target="_blank" class="btn-glow btn-outline"><i class="fab fa-whatsapp"></i> হোয়াটসঅ্যাপ</a>
+    </div>
+  </div>
+</section>
+
+<!-- Premium Image Gallery - Dopamine driven visuals -->
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title">আমাদের দক্ষ কর্মীরা 📸</h2>
+    <div class="image-showcase">
+      <div class="img-card fade-up"><img src="https://images.pexels.com/photos/8876476/pexels-photo-8876476.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional office cleaner in Bangladesh"><div style="padding: 1rem;"><p>প্রশিক্ষিত অফিস ক্লিনার</p><span style="color:#00D4FF;">পেশাদার পরিচ্ছন্নতা দল</span></div></div>
+      <div class="img-card fade-up"><img src="https://images.pexels.com/photos/4427814/pexels-photo-4427814.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Electrician fixing panel"><div style="padding: 1rem;"><p>ইলেকট্রিশিয়ান টিম</p><span style="color:#FFB347;">২৪/৭ ইমার্জেন্সি</span></div></div>
+      <div class="img-card fade-up"><img src="https://images.pexels.com/photos/7640751/pexels-photo-7640751.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Building manager supervising"><div style="padding: 1rem;"><p>বিল্ডিং ম্যানেজার</p><span style="color:#00D4FF;">সম্পূর্ণ দায়িত্বশীল</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section with Bangla -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">আমাদের সেবা সমূহ</h2>
+    <div class="grid-3d">
+      <div class="service-card fade-up"><i class="fas fa-chalkboard-user"></i><h3>অফিস ক্লিনার</h3><p>প্রাতিষ্ঠানিক মানের পরিষ্কার, স্বাস্থ্যসম্মত উপকরণ, প্রশিক্ষিত স্টাফ।</p><div class="bangla-desc">✓ ১০০% সন্তুষ্টির গ্যারান্টি</div></div>
+      <div class="service-card fade-up"><i class="fas fa-mug-hot"></i><h3>টি বয় / মেয়ে</h3><p>ভদ্র, বিনয়ী ও পেশাদার পানীয় ও পরিবেশন সেবা। অফিস ও বাড়ির জন্য আদর্শ।</p><div class="bangla-desc">✓ আন্তরিক আচরণ</div></div>
+      <div class="service-card fade-up"><i class="fas fa-bolt"></i><h3>ইলেকট্রিশিয়ান</h3><p>লাইসেন্সপ্রাপ্ত ইলেকট্রিশিয়ান, তারের সংযোগ, ফিক্সচার ও জরুরি মেরামত।</p><div class="bangla-desc">✓ ৪৫ মিনিটে সাইটে</div></div>
+      <div class="service-card fade-up"><i class="fas fa-building-user"></i><h3>বিল্ডিং ম্যানেজার</h3><p>ভবনের রুটিন অপারেশন, নিরাপত্তা তদারকি, ভাড়াটিয়া সমন্বয়।</p><div class="bangla-desc">✓ ১০+ বছর অভিজ্ঞতা</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why TFS / Trust Signals with more Bangla -->
+<section id="whyus">
+  <div class="container">
+    <h2 class="section-title">কেন টিএফএস সেরা?</h2>
+    <div class="stats-row">
+      <div class="stat-item fade-up"><i class="fas fa-id-card" style="font-size: 2rem; color: #FFB347;"></i><h3>ভেরিফাইড স্টাফ</h3><p>পটভূমি যাচাই + স্বাস্থ্য সনদ</p></div>
+      <div class="stat-item fade-up"><i class="fas fa-stopwatch" style="font-size: 2rem; color: #FFB347;"></i><h3>দ্রুত সেবা</h3><p>ঢাকায় ১ ঘণ্টায় রেসপন্স</p></div>
+      <div class="stat-item fade-up"><i class="fas fa-chart-line" style="font-size: 2rem; color: #FFB347;"></i><h3>৬৫০+ কর্পোরেট</h3><p>ব্যাংক, হোটেল, শপিং মল</p></div>
+      <div class="stat-item fade-up"><i class="fas fa-hand-holding-heart" style="font-size: 2rem; color: #FFB347;"></i><h3>সেবা গ্যারান্টি</h3><p>পুনরায় সেবা বিনামূল্যে</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Counter -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-item"><div class="stat-number" data-target="1860">0</div><p>সন্তুষ্ট ক্লায়েন্ট</p></div>
+      <div class="stat-item"><div class="stat-number" data-target="99">0</div><p>গ্রাহক ধারণ হার</p></div>
+      <div class="stat-item"><div class="stat-number" data-target="5240">0</div><p>সফল সার্ভিস</p></div>
+      <div class="stat-item"><div class="stat-number" data-target="48">0</div><p>মিনিটে রেসপন্স</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it Works + Bangla -->
+<section>
+  <div class="container">
+    <h2 class="section-title">কিভাবে কাজ করি</h2>
+    <div class="grid-3d">
+      <div class="service-card fade-up"><i class="fas fa-phone-alt" style="color:#FFB347;"></i><h3>১. যোগাযোগ করুন</h3><p>কল অথবা হোয়াটসঅ্যাপে অভিযোগ জানান</p></div>
+      <div class="service-card fade-up"><i class="fas fa-calendar-week" style="color:#FFB347;"></i><h3>২. সময় নির্ধারণ</h3><p>আমরা বিশেষজ্ঞ প্রেরণ করি</p></div>
+      <div class="service-card fade-up"><i class="fas fa-smile-beam" style="color:#FFB347;"></i><h3>৩. সেবা সমাপ্তি</h3><p>গুণগত মান পরীক্ষা ও ফিডব্যাক নেওয়া</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials with Bangla -->
+<section id="testimonials">
+  <div class="container">
+    <h2 class="section-title">গ্রাহকের বাণী</h2>
+    <div class="testi-card" id="testimonialArea">
+      <div class="testi-slide active"><i class="fas fa-quote-left" style="font-size: 2rem; color: #00D4FF;"></i><p style="font-size: 1.2rem; margin: 1rem 0;">“অফিসের ক্লিনিং এর জন্য টিএফএস দারুণ সেবা দিয়েছে। কর্মীরা অত্যন্ত পেশাদার।”</p><h4>— রেজাউল করিম, জেনারেল ম্যানেজার</h4><div>★★★★★</div></div>
+      <div class="testi-slide"><i class="fas fa-quote-left" style="font-size: 2rem; color: #00D4FF;"></i><p style="font-size: 1.2rem; margin: 1rem 0;">“ইলেকট্রিশিয়ান এসে ২০ মিনিটেই সব সমস্যা সমাধান করে দিল। অসাধারণ সেবা!”</p><h4>— নুসরাত জাহান, গৃহিণী</h4><div>★★★★★</div></div>
+      <div class="testi-slide"><i class="fas fa-quote-left" style="font-size: 2rem; color: #00D4FF;"></i><p style="font-size: 1.2rem; margin: 1rem 0;">“বিল্ডিং ম্যানেজার নিয়োগের পর আমাদের কমপ্লেক্স অনেক শৃঙ্খলিত হয়েছে। ধন্যবাদ টিএফএস।”</p><h4>— মোঃ সেলিম, হাউজিং সোসাইটি</h4><div>★★★★★</div></div>
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;"><button id="prevTesti" style="background: rgba(0,212,255,0.2); border: none; padding: 8px 24px; border-radius: 40px; color: white;">পূর্ববর্তী</button><button id="nextTesti" style="background: rgba(0,212,255,0.2); border: none; padding: 8px 24px; border-radius: 40px; color: white;">পরবর্তী</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact + Map Bangla -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">যোগাযোগ করুন</h2>
+    <div class="contact-glass">
+      <div style="flex:1">
+        <h3><i class="fas fa-paper-plane"></i> দ্রুত সেবা অনুরোধ</h3>
+        <form id="tfsForm">
+          <input type="text" id="nameBang" placeholder="আপনার নাম" style="width:100%; margin:10px 0; padding: 14px; border-radius: 50px; background: rgba(255,255,255,0.1); border: 1px solid #00D4FF; color:white;">
+          <input type="tel" id="phoneBang" placeholder="মোবাইল নম্বর" style="width:100%; margin:10px 0; padding: 14px; border-radius: 50px; background: rgba(255,255,255,0.1); border: 1px solid #00D4FF; color:white;">
+          <select id="serviceBang" style="width:100%; margin:10px 0; padding: 14px; border-radius: 50px; background: rgba(255,255,255,0.1); color:white;"><option>অফিস ক্লিনার</option><option>টি বয়/মেয়ে</option><option>ইলেকট্রিশিয়ান</option><option>বিল্ডিং ম্যানেজার</option></select>
+          <button type="submit" class="btn-glow" style="width:100%;"><i class="fas fa-gem"></i> প্রেরণ করুন</button>
+          <p id="formFeed" style="margin-top:12px;"></p>
+        </form>
+      </div>
+      <div style="flex:1">
+        <h3><i class="fas fa-map-marked-alt"></i> আমাদের ঠিকানা</h3>
+        <iframe src="https://maps.google.com/maps?q=Banani%20DOHS%20Dhaka&t=&z=14&output=embed" width="100%" height="200" style="border-radius: 28px; border:0;" loading="lazy"></iframe>
+        <p style="margin-top: 1rem;"><i class="fas fa-map-pin"></i> বনানী, ঢাকা-১২১৩, বাংলাদেশ</p>
+        <p><i class="fas fa-phone-alt"></i> <a href="tel:+8809696747242" style="color:#00D4FF;">+8809696747242</a> | <i class="fab fa-whatsapp"></i> <a href="https://wa.me/8809696747242" style="color:#25D366;">হোয়াটসঅ্যাপ</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© ২০২৫ ট্রাস্ট ফ্যাসিলিটি সলিউশন — পেশাদারিত্বের প্রতীক। সমস্ত অধিকার সংরক্ষিত।</p>
+    <p style="margin-top: 0.5rem;"><a href="#home" style="color:#00D4FF; text-decoration: none;">হোম</a> | <a href="#services" style="color:#00D4FF;">সেবা</a> | <a href="#contact" style="color:#00D4FF;">যোগাযোগ</a></p>
+  </div>
+</footer>
+
+<!-- Sticky Mobile CTA -->
+<div class="mobile-sticky">
+  <a href="tel:+8809696747242" class="sticky-btn"><i class="fas fa-phone-alt"></i> কল</a>
+  <a href="https://wa.me/8809696747242" target="_blank" class="sticky-btn sticky-wa"><i class="fab fa-whatsapp"></i> হোয়াটসঅ্যাপ</a>
+</div>
+
+<script>
+  // Nav scroll + mobile toggle
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => { if(window.scrollY > 60) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled'); });
+  const toggle = document.getElementById('mobileMenuToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggle?.addEventListener('click', () => navLinks.classList.toggle('active'));
+  document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('active')));
+
+  // fade-up observer
+  const faders = document.querySelectorAll('.fade-up');
+  const obs = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } }); }, { threshold: 0.2 });
+  faders.forEach(f => obs.observe(f));
+
+  // Counter
+  const counters = document.querySelectorAll('.stat-number');
+  const startCounters = () => {
+    counters.forEach(c => {
+      const target = parseInt(c.getAttribute('data-target'));
+      let current = 0;
+      const step = target / 50;
+      const update = () => {
+        current += step;
+        if(current < target) { c.innerText = Math.ceil(current); requestAnimationFrame(update); }
+        else c.innerText = target;
+      };
+      update();
+    });
+  };
+  const statsSec = document.getElementById('stats');
+  const statsObserver = new IntersectionObserver((entries) => { if(entries[0].isIntersecting) { startCounters(); statsObserver.disconnect(); } }, { threshold: 0.4 });
+  if(statsSec) statsObserver.observe(statsSec);
+
+  // Testimonial carousel
+  const slides = document.querySelectorAll('.testi-slide');
+  let currentSlide = 0;
+  function showSlide(idx) { slides.forEach((s,i) => { s.style.display = i === idx ? 'block' : 'none'; }); }
+  if(slides.length) { slides.forEach(s => s.style.display = 'none'); showSlide(0); }
+  document.getElementById('nextTesti')?.addEventListener('click', () => { currentSlide = (currentSlide+1)%slides.length; showSlide(currentSlide); });
+  document.getElementById('prevTesti')?.addEventListener('click', () => { currentSlide = (currentSlide-1+slides.length)%slides.length; showSlide(currentSlide); });
+  setInterval(() => { if(slides.length) { currentSlide = (currentSlide+1)%slides.length; showSlide(currentSlide); } }, 5500);
+
+  // Form Handler Bangla
+  const form = document.getElementById('tfsForm');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('nameBang').value.trim();
+    const phone = document.getElementById('phoneBang').value.trim();
+    const feed = document.getElementById('formFeed');
+    if(!name || !phone) { feed.innerText = 'দয়া করে নাম ও মোবাইল নম্বর দিন।'; feed.style.color = '#FFB347'; return; }
+    feed.innerText = `ধন্যবাদ ${name}! আমাদের টিম শীঘ্রই আপনার সাথে যোগাযোগ করবে।`;
+    feed.style.color = '#00D4FF';
+    form.reset();
+    setTimeout(() => feed.innerText = '', 4000);
+  });
+  // smooth anchor
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId === "#") return;
+      const target = document.querySelector(targetId);
+      if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+<style>
+  .testi-slide { display: none; animation: fadeSlide 0.5s ease; text-align: center; }
+  @keyframes fadeSlide { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+  input, select { outline: none; }
+  .service-card:hover { transform: translateY(-8px); border-color: #00D4FF; box-shadow: 0 20px 35px rgba(0,212,255,0.2); }
+  .img-card { transition: all 0.4s; }
+</style>
+</body>
+</html>
